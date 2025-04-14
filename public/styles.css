@@ -1,0 +1,107 @@
+body {
+  font-family: 'Geist Mono';
+  font-size: 18px; /* Base font size for body text */
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 50px 320px; /* Add 50px top padding and 100px left/right padding */
+  margin: auto 0px; /* Center the content horizontally */
+}
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sm-link {
+  display: inline-flex;
+  align-items: center; /* Align image and text vertically */
+  gap: 8px; /* Add space between the image and text */
+  text-decoration: none;
+  color: black;
+}
+.sm-icon {
+  height: 20px; /* Adjust the height of the image */
+  width: auto; /* Maintain aspect ratio */
+}
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: transform 0.3s ease;
+}
+
+.underline-hover:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+.container {
+  padding: 20px; /* Add some padding around the main container */
+}
+.aboutme, .code-profiles, .awards, .container {
+  padding: 10px 0; /* Add vertical spacing between sections */
+}
+
+.code-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 200px;
+}
+h1 {
+  font-size: 30px; /* Large and bold for the main heading */
+}
+
+.social-links {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically align the images and text */
+  gap: 15px; /* Add space between the links */
+  font-size: 16px; /* Adjust font size for better readability */
+}
+h3 {
+  font-size: 20px; /* Slightly smaller for subheadings */
+}
+
+p {
+  font-size: 18px; /* Readable size for paragraphs */
+}
+
+.mgt {
+  margin-top: 1px;
+}
+.profile-link {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  gap: 8px;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+.profile-icon {
+  height: 20px; /* Adjust the height to fit nicely beside the text */
+  width: auto; /* Maintain aspect ratio */
+}
+.profile-link:hover {
+  transform: scale(1.1);
+}
+.awards ul {
+  list-style-type: disc; /* Use bullet points */
+  margin-left: 20px; /* Add some indentation */
+  padding-left: 0;
+}
+
+.awards li {
+  font-size: 16px; /* Match the font size with the rest of the text */
+  margin-bottom: 10px; /* Add spacing between list items */
+}
+a {
+  text-decoration: none; /* Remove underline from all links */
+  color: inherit; /* Inherit the color from the parent element */
+}
+
