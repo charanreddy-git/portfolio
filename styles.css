@@ -4,7 +4,7 @@ body {
   background-color: #f8f8f8;
   padding: 50px;
   margin: 0 auto;
-  max-width: 1200px; /* Set a max-width for larger screens */
+  max-width: 750px; /* Set a max-width for larger screens */
   line-height: 1.5; /* Improve readability with better line spacing */
 }
 
