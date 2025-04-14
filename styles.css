@@ -1,28 +1,33 @@
 body {
   font-family: 'Geist Mono';
-  font-size: 18px; /* Base font size for body text */
+  font-size: 16px; /* Slightly smaller base font size for better mobile readability */
   background-color: #f8f8f8;
-  color: #333;
-  padding: 50px 320px; /* Add 50px top padding and 100px left/right padding */
-  margin: auto 0px; /* Center the content horizontally */
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 1200px; /* Set a max-width for larger screens */
+  line-height: 1.5; /* Improve readability with better line spacing */
 }
+
 .underline-hover {
   position: relative;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
 }
+
 .sm-link {
   display: inline-flex;
-  align-items: center; /* Align image and text vertically */
-  gap: 8px; /* Add space between the image and text */
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
   color: black;
 }
+
 .sm-icon {
-  height: 20px; /* Adjust the height of the image */
-  width: auto; /* Maintain aspect ratio */
+  height: 20px;
+  width: auto;
 }
+
 .underline-hover::after {
   content: "";
   position: absolute;
@@ -39,40 +44,52 @@ body {
 .underline-hover:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
+
 .container {
-  padding: 20px; /* Add some padding around the main container */
+  padding: 15px 0;
 }
-.aboutme, .code-profiles, .awards, .container {
-  padding: 10px 0; /* Add vertical spacing between sections */
+
+.aboutme, .code-profiles, .awards {
+  padding: 10px 0;
+  margin-bottom: 20px;
 }
 
 .code-links {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 200px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  gap: 75px; /* Reduced gap that works better across screen sizes */
 }
+
 h1 {
-  font-size: 30px; /* Large and bold for the main heading */
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 .social-links {
-  display: flex; /* Align items horizontally */
-  align-items: center; /* Vertically align the images and text */
-  gap: 15px; /* Add space between the links */
-  font-size: 16px; /* Adjust font size for better readability */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  flex-wrap: wrap; /* Allow wrapping if needed */
 }
+
 h3 {
-  font-size: 20px; /* Slightly smaller for subheadings */
+  font-size: 20px;
+
+  padding-bottom: 5px;
+  margin-top: 25px;
 }
 
 p {
-  font-size: 18px; /* Readable size for paragraphs */
+  font-size: 16px;
 }
 
 .mgt {
   margin-top: 1px;
 }
+
 .profile-link {
   font-size: 16px;
   display: inline-flex;
@@ -81,27 +98,94 @@ p {
   color: black;
   gap: 8px;
   font-weight: bold;
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .profile-icon {
-  height: 20px; /* Adjust the height to fit nicely beside the text */
-  width: auto; /* Maintain aspect ratio */
+  height: 20px;
+  width: auto;
 }
+
 .profile-link:hover {
-  transform: scale(1.1);
+  transform: scale(1.05); /* Reduced scale for better mobile experience */
 }
+
 .awards ul {
-  list-style-type: disc; /* Use bullet points */
-  margin-left: 20px; /* Add some indentation */
+  list-style-type: disc;
+  margin-left: 20px;
   padding-left: 0;
 }
 
 .awards li {
-  font-size: 16px; /* Match the font size with the rest of the text */
-  margin-bottom: 10px; /* Add spacing between list items */
-}
-a {
-  text-decoration: none; /* Remove underline from all links */
-  color: inherit; /* Inherit the color from the parent element */
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small mobile devices (up to 480px) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .code-links {
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .profile-link {
+    font-size: 14px;
+  }
+
+  .profile-icon {
+    height: 16px;
+  }
+
+  .awards li {
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (tablets, 481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .code-links {
+    gap: 40px;
+  }
+}
+
+/* Large devices (laptops/desktops, 769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    padding: 25px 50px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1025px and up) */
+@media screen and (min-width: 1025px) {
+  body {
+    padding: 40px 80px;
+  }
+}
