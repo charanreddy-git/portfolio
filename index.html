@@ -3,72 +3,192 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Charan Reddy Puchala, a software development engineer who builds reliable systems for real-world workflows." />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Charan Reddy</title>
+    <meta name="description" content="Charan Reddy Puchala — Software Engineer building reliable systems for real-world workflows." />
+    <meta name="theme-color" content="#fafafa" />
+    <title>Charan Reddy — Software Engineer</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Charan Reddy — Software Engineer" />
+    <meta property="og:description" content="Software Engineer building reliable systems for real-world workflows." />
+    <meta property="og:site_name" content="Charan Reddy" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Charan Reddy — Software Engineer" />
+    <meta name="twitter:description" content="Software Engineer building reliable systems for real-world workflows." />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
 
+    <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true">
+      <symbol id="icon-github" viewBox="0 0 640 640">
+        <path d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"/>
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 640 640">
+        <path d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z"/>
+      </symbol>
+      <symbol id="icon-link" viewBox="0 0 640 640">
+        <path d="M288.6 76.8C344.8 20.6 436 20.6 492.2 76.8C548.4 133 548.4 224.2 492.2 280.4L328.2 444.4C293.8 478.8 238.1 478.8 203.7 444.4C169.3 410 169.3 354.3 203.7 319.9L356.5 167.3C369 154.8 389.3 154.8 401.8 167.3C414.3 179.8 414.3 200.1 401.8 212.6L249 365.3C239.6 374.7 239.6 389.9 249 399.2C258.4 408.5 273.6 408.6 282.9 399.2L446.9 235.2C478.1 204 478.1 153.3 446.9 122.1C415.7 90.9 365 90.9 333.8 122.1L169.8 286.1C116.7 339.2 116.7 425.3 169.8 478.4C222.9 531.5 309 531.5 362.1 478.4L492.3 348.3C504.8 335.8 525.1 335.8 537.6 348.3C550.1 360.8 550.1 381.1 537.6 393.6L407.4 523.6C329.3 601.7 202.7 601.7 124.6 523.6C46.5 445.5 46.5 318.9 124.6 240.8L288.6 76.8z"/>
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 640 640">
+        <path transform="translate(40, 0) scale(1.25)" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312.2c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+      </symbol>
+      <symbol id="icon-globe" viewBox="0 0 512 512">
+        <path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"/>
+      </symbol>
+    </svg>
+
     <a href="#main" class="skip-link">Skip to content</a>
 
-    <main id="main" tabindex="-1">
+    <div class="bg-pattern" aria-hidden="true">
+      <svg width="100%" height="100%">
+        <defs>
+          <pattern id="hatch" viewBox="0 0 10 10" width="8" height="8" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="10" x2="10" y2="0" stroke="currentColor" vector-effect="non-scaling-stroke" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hatch)" />
+      </svg>
+    </div>
 
-      <h1>Charan Reddy</h1>
-      <p class="title">Software Development Engineer</p>
+    <div class="page">
+      <div class="gutter gutter--left" aria-hidden="true"></div>
 
-      <p class="intro">I build systems that replace uncertainty with clarity.</p>
+      <main id="main" class="content" tabindex="-1">
 
-      <section aria-labelledby="projects-heading">
-        <h2 id="projects-heading" class="label">Projects</h2>
-
-        <article>
-          <h3>TrackProof</h3>
-          <p class="desc">Verifies a field agent&rsquo;s GPS position within 100&thinsp;m before property evidence is accepted and tracks every request from dispatch to completion. Built for NRIs and buyers who can&rsquo;t be on-site.</p>
-          <p class="tech">React · Node.js · PostgreSQL · Socket.IO</p>
-        </article>
-
-        <article>
-          <h3>DaySale</h3>
-          <p class="desc">A serverless pipeline that accepts HTML and PDF sales exports in any format and returns a clean, consistent daily summary ready to copy and paste. Saves hours of manual data wrangling every week.</p>
-          <p class="tech">Node.js · Python · Flask · Vercel</p>
-          <p class="links">
-            <a href="https://github.com/charanreddy-git/daysale" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">&rarr;</span><span class="sr-only"> (opens in a new tab)</span></a>
-          </p>
-        </article>
-
-        <article>
-          <h3>Bug Bingo</h3>
-          <p class="desc">A timed debugging contest platform with a Monaco-based web IDE and live leaderboard. Designed for college coding events where students debug under time pressure.</p>
-          <p class="tech">Bun · JavaScript · Monaco Editor · Judge0</p>
-        </article>
-      </section>
-
-      <p class="background">Competitive programming taught me to decompose problems and write correct code under time pressure &mdash; a discipline I still practice on LeetCode (1751), CodeChef (1728), and Codeforces (Specialist). I also organize contests as Technical Head of&nbsp;ECA.</p>
-
-      <div class="toolkit">
-        <p><span>Languages</span> JavaScript, TypeScript, Python, C++, Java, C</p>
-        <p><span>Frameworks</span> React, Node.js, Express, Bun, Flask</p>
-        <p><span>Infrastructure</span> PostgreSQL, MySQL, Prisma, Git, Linux, Vercel</p>
-      </div>
-
-      <footer class="contact">
-        <a class="email" href="mailto:charanreddy.puchala@gmail.com">charanreddy.puchala@gmail.com</a>
-        <div class="social">
-          <a href="https://github.com/charanreddy-git" target="_blank" rel="noopener noreferrer">GitHub <span class="sr-only">(opens in a new tab)</span></a>
-          <a href="https://www.linkedin.com/in/puchala-charanreddy" target="_blank" rel="noopener noreferrer">LinkedIn <span class="sr-only">(opens in a new tab)</span></a>
+        <div class="hero-block">
+          <header class="hero">
+            <div class="hero-top">
+              <div class="hero-identity">
+                <h1>Charan Reddy</h1>
+                <p class="title">Software Engineer</p>
+              </div>
+              <nav class="hero-links" aria-label="Primary links">
+                <a class="icon-link icon-link--lg" href="https://www.linkedin.com/in/puchala-charanreddy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+                  <span class="sr-only"> (opens in a new tab)</span>
+                </a>
+                <a class="icon-link icon-link--lg" href="https://github.com/charanreddy-git" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+                  <span class="sr-only"> (opens in a new tab)</span>
+                </a>
+                <a class="icon-link icon-link--lg" href="mailto:charanreddy.puchala@gmail.com" aria-label="Email charanreddy.puchala@gmail.com">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+                </a>
+                <span class="resume-wrap">
+                  <a
+                    id="resume-link"
+                    class="icon-link icon-link--sm"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open resume"
+                    hidden
+                  >
+                    <svg class="icon" aria-hidden="true"><use href="#icon-link"></use></svg>
+                    <span class="sr-only"> (opens in a new tab)</span>
+                  </a>
+                </span>
+              </nav>
+            </div>
+            <p class="intro">I build systems that replace uncertainty with clarity.</p>
+          </header>
         </div>
-      </footer>
 
-    </main>
+        <section class="section" aria-labelledby="projects-heading">
+          <h2 id="projects-heading" class="section-title">Projects</h2>
 
-    <footer class="footer">
+          <div class="section-list">
+            <article class="project">
+              <div class="project-header">
+                <h3 class="project-title">TrackProof</h3>
+              </div>
+              <p class="project-desc">GPS-verified property evidence for remote buyers.</p>
+              <ul class="project-details">
+                <li>Verifies a field agent&rsquo;s GPS position within 100&thinsp;m before property evidence is accepted.</li>
+                <li>Tracks every request from dispatch to completion.</li>
+                <li>Built for NRIs and buyers who can&rsquo;t be on-site.</li>
+                <li>Stack &mdash; React, Node.js, PostgreSQL, Socket.IO</li>
+              </ul>
+            </article>
+
+            <article class="project">
+              <div class="project-header">
+                <h3 class="project-title">DaySale</h3>
+                <span class="project-sep" aria-hidden="true">&middot;</span>
+                <div class="project-icons">
+                  <a class="icon-link icon-link--lg" href="https://github.com/charanreddy-git/daysale" target="_blank" rel="noopener noreferrer" aria-label="DaySale on GitHub">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+                    <span class="sr-only"> (opens in a new tab)</span>
+                  </a>
+                </div>
+              </div>
+              <p class="project-desc">A serverless pipeline for daily sales summaries.</p>
+              <ul class="project-details">
+                <li>Accepts HTML and PDF sales exports in any format and returns a clean, consistent daily summary.</li>
+                <li>Saves hours of manual data wrangling every week.</li>
+                <li>Stack &mdash; Node.js, Python, Flask, Vercel</li>
+              </ul>
+            </article>
+
+            <article class="project">
+              <div class="project-header">
+                <h3 class="project-title">Bug Bingo</h3>
+              </div>
+              <p class="project-desc">A timed debugging contest platform for college events.</p>
+              <ul class="project-details">
+                <li>Monaco-based web IDE with live leaderboard.</li>
+                <li>Designed for coding events where students debug under time pressure.</li>
+                <li>Stack &mdash; Bun, JavaScript, Monaco Editor, Judge0</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="freelance-heading">
+          <h2 id="freelance-heading" class="section-title">Freelance</h2>
+
+          <div class="section-list">
+            <article class="project">
+              <div class="project-header">
+                <h3 class="project-title">Shootgram</h3>
+                <span class="project-sep" aria-hidden="true">&middot;</span>
+                <div class="project-icons">
+                  <a class="icon-link icon-link--sm" href="https://shootgram.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Visit Shootgram live site">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg>
+                    <span class="sr-only"> (opens in a new tab)</span>
+                  </a>
+                </div>
+              </div>
+              <p class="project-desc">Premium creator platform for booking photographers and reel creators in Hyderabad.</p>
+            </article>
+
+            <article class="project">
+              <div class="project-header">
+                <h3 class="project-title">Open to projects</h3>
+                <span class="project-sep" aria-hidden="true">&middot;</span>
+                <div class="project-icons">
+                  <a class="icon-link icon-link--lg" href="mailto:charanreddy.puchala@gmail.com" aria-label="Email charanreddy.puchala@gmail.com">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+                  </a>
+                </div>
+              </div>
+              <p class="project-desc">Available for contract work on web apps, automation, and internal tools.</p>
+            </article>
+          </div>
+        </section>
+
+      </main>
+
+      <div class="gutter gutter--right" aria-hidden="true"></div>
+    </div>
+
+    <footer class="site-footer">
       <p>&copy; 2026 Charan Reddy Puchala</p>
     </footer>
 
+    <script src="config.js"></script>
+    <script src="main.js" defer></script>
   </body>
 </html>
