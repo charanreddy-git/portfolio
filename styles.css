@@ -6,6 +6,21 @@
   --sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --mono: "Geist Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
   --ease-snappy: cubic-bezier(0.215, 0.61, 0.355, 1);
+  /* Spacing scale (used for consistent vertical rhythm). */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2.25rem;
+  --space-8: 3.5rem;
+
+  /* Fluid layout variables for responsiveness. */
+  --container-x: clamp(1.25rem, 3vw, 1.5rem);
+  --container-top: clamp(3rem, 10vw, 5rem);
+  --container-bottom: clamp(1rem, 2vw, 1.25rem);
+  --section-y: clamp(2.5rem, 8vw, 3.5rem);
 }
 
 *,
@@ -69,7 +84,7 @@ a:focus-visible {
 main {
   max-width: 640px;
   margin: 0 auto;
-  padding: 5rem 1.5rem 1rem;
+  padding: var(--container-top) var(--container-x) var(--container-bottom);
 }
 
 main:focus { outline: none; }
@@ -117,7 +132,7 @@ h1 {
 }
 
 section {
-  margin: 3.5rem 0;
+  margin: var(--section-y) 0;
 }
 
 /* Projects */
@@ -155,7 +170,7 @@ article h3 {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0 1.25rem;
+  gap: var(--space-3) var(--space-5);
 }
 
 .links a {
@@ -173,7 +188,7 @@ article h3 {
 /* Background narrative */
 
 .background {
-  margin: 3.5rem 0 0;
+  margin: var(--section-y) 0 0;
   font-size: 0.9375rem;
   line-height: 1.6;
   max-width: 540px;
@@ -191,6 +206,10 @@ article h3 {
   margin: 0;
 }
 
+.toolkit p + p {
+  margin-top: var(--space-3);
+}
+
 .toolkit span {
   font-weight: 600;
   margin-right: 0.2em;
@@ -199,7 +218,7 @@ article h3 {
 /* Contact */
 
 .contact {
-  margin: 3.5rem 0 0;
+  margin: var(--section-y) 0 0;
 }
 
 .email {
@@ -239,7 +258,7 @@ article h3 {
 .footer {
   max-width: 640px;
   margin: 0 auto;
-  padding: 0.5rem 1.5rem 3.5rem;
+  padding: 0.5rem var(--container-x) var(--section-y);
 }
 
 .footer p {
@@ -251,12 +270,6 @@ article h3 {
 /* Responsive */
 
 @media (max-width: 480px) {
-  main {
-    padding-top: 3rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
   h1 {
     font-size: 1.75rem;
     letter-spacing: -0.025em;
@@ -265,10 +278,6 @@ article h3 {
   .intro {
     margin-top: 1.25rem;
     font-size: 0.9375rem;
-  }
-
-  section {
-    margin: 2.5rem 0;
   }
 
   article h3 {
@@ -280,17 +289,7 @@ article h3 {
   }
 
   .background {
-    margin-top: 2.5rem;
     font-size: 0.875rem;
-  }
-
-  .contact {
-    margin-top: 2.5rem;
-  }
-
-  .footer {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
   }
 }
 
