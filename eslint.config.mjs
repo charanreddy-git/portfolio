@@ -99,9 +99,8 @@ export default defineConfig([
   },
   {
     ignores: [
-      "resume/",
-      "scripts/",
-      "config.js",
+    "resume/",
+    "config.js",
       "node_modules/"
     ]
   }

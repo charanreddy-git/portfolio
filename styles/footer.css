@@ -13,12 +13,3 @@
 .site-footer p {
   margin: 0;
 }
-
-.footer-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  margin-bottom: 1rem;
-  fill: var(--text-muted);
-}

@@ -56,7 +56,7 @@
     <script>
       (function () {
         sessionStorage.setItem("spa-path", location.pathname);
-        var path = sessionStorage.getItem("spa-path");
+        var path = location.pathname;
         var validRoutes = ["/", "/projects", "/blog", "/resume"];
         if (path && (validRoutes.indexOf(path) !== -1 || path.indexOf("/blog/") === 0)) {
           location.replace("/");

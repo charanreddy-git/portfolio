@@ -61,8 +61,6 @@
 
   function initResumeEmbed() {
     var frame = document.getElementById("resume-frame");
-    var openLink = document.getElementById("resume-open-link");
-    var downloadLink = document.getElementById("resume-download-link");
     var fallback = document.getElementById("resume-fallback");
     if (!frame) { return; }
 
@@ -99,9 +97,6 @@
     }
 
     var urls = parseResumeUrls(url);
-    if (openLink) { openLink.href = urls.open; }
-    if (downloadLink) { downloadLink.href = urls.download; }
-
     var completed = false;
     var timeoutId = window.setTimeout(function () {
       if (completed) { return; }
