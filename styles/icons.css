@@ -1,0 +1,30 @@
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast), fill var(--transition-fast);
+}
+
+.icon-link:hover,
+.icon-link:focus-visible,
+.icon-link:active {
+  color: var(--text);
+  fill: var(--text);
+}
+
+.icon {
+  display: block;
+  fill: currentColor;
+}
+
+.icon-link--lg .icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.icon-link--sm .icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}

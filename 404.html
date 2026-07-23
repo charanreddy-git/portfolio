@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fafafa" />
+    <title>404 — Charan Reddy</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 2rem;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+      }
+      .four-oh-four {
+        text-align: center;
+        max-width: 400px;
+      }
+      .four-oh-four h1 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem;
+        line-height: 1.4;
+      }
+      .four-oh-four p {
+        margin: 0 0 1.5rem;
+        color: var(--text-muted);
+        font-size: var(--text-lg);
+        line-height: var(--lh-fold);
+      }
+      .four-oh-four a {
+        color: var(--text-muted);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        font-size: var(--text-lg);
+        transition: color var(--transition-fast);
+      }
+      .four-oh-four a:hover {
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="four-oh-four">
+      <h1>This page is gone.</h1>
+      <p>It might have moved or never existed.</p>
+      <a href="/">Go home</a>
+    </div>
+    <script>
+      (function () {
+        sessionStorage.setItem("spa-path", location.pathname);
+        var path = sessionStorage.getItem("spa-path");
+        var validRoutes = ["/", "/projects", "/blog", "/resume"];
+        if (path && (validRoutes.indexOf(path) !== -1 || path.indexOf("/blog/") === 0)) {
+          location.replace("/");
+        }
+      })();
+    </script>
+  </body>
+</html>
