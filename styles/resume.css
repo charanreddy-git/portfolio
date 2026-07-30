@@ -1,7 +1,7 @@
 .resume-page {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - var(--nav-h));
+  min-height: 100vh;
 }
 
 .resume-page .hero-block {
@@ -22,7 +22,7 @@
 
 .resume-fallback {
   margin: 0.9rem 0 0;
-  color: var(--text-muted);
+  color: var(--text);
 }
 
 .resume-embed-wrap {

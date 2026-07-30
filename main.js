@@ -2,20 +2,11 @@
   "use strict";
 
   const routes = ["/", "/projects", "/blog", "/resume"];
-  const navLinks = document.querySelectorAll(".nav-link");
   const mainEl = document.getElementById("main");
   const pageCache = {};
 
-  function updateNav(route) {
-    var active = route === "/" ? "/" : "/" + (route.split("/")[1] || "");
-    navLinks.forEach(function (link) {
-      link.classList.toggle("active", link.getAttribute("data-route") === active);
-    });
-  }
-
   function injectPage(html, route) {
     mainEl.innerHTML = html;
-    updateNav(route);
     if (route === "/resume") {
       initResumeEmbed();
     }
@@ -30,7 +21,6 @@
     }
 
     if (route === "/") {
-      updateNav("/");
       return;
     }
 
@@ -120,13 +110,6 @@
     frame.src = urls.preview;
   }
 
-  navLinks.forEach(function (link) {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      navigate(link.getAttribute("data-route"));
-    });
-  });
-
   window.addEventListener("popstate", function () {
     var path = location.pathname;
     if (routes.indexOf(path) !== -1) {
@@ -144,42 +127,13 @@
     var path = stored || location.pathname;
 
     if (routes.indexOf(path) !== -1) {
-      if (path === "/") {
-        updateNav("/");
-      } else {
+      if (path !== "/") {
         loadPage(path);
       }
     } else {
       if (path !== "/") { try { history.replaceState(null, "", "/"); } catch (_) {} }
-      updateNav("/");
     }
   }
 
   init();
-
-  // Theme toggle
-
-  var toggle = document.querySelector(".theme-toggle");
-  var STORAGE_KEY = "theme";
-
-  function setTheme(dark) {
-    document.documentElement.classList.toggle("dark", dark);
-    toggle.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
-
-    var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) { meta.setAttribute("content", dark ? "#0a0a0a" : "#fafafa"); }
-
-    localStorage.setItem(STORAGE_KEY, dark ? "dark" : "light");
-  }
-
-  var saved = localStorage.getItem(STORAGE_KEY);
-  var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  setTheme(saved ? saved === "dark" : prefersDark);
-
-  if (toggle) {
-    toggle.addEventListener("click", function () {
-      var isDark = document.documentElement.classList.contains("dark");
-      setTheme(!isDark);
-    });
-  }
 })();

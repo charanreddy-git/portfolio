@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#fafafa" />
+    <meta name="theme-color" content="#ffffff" />
     <title>404 — Charan Reddy</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles/base.css" />
@@ -31,19 +31,20 @@
       }
       .four-oh-four p {
         margin: 0 0 1.5rem;
-        color: var(--text-muted);
+        color: var(--text);
         font-size: var(--text-lg);
         line-height: var(--lh-fold);
       }
       .four-oh-four a {
-        color: var(--text-muted);
+        color: var(--text);
+        opacity: 0.6;
         text-decoration: underline;
         text-underline-offset: 3px;
         font-size: var(--text-lg);
-        transition: color var(--transition-fast);
+        transition: opacity var(--transition-fast);
       }
       .four-oh-four a:hover {
-        color: var(--text);
+        opacity: 1;
       }
     </style>
   </head>

@@ -1,15 +1,15 @@
 .section {
-  padding: 100px var(--pad-x) 0;
+  padding: 120px var(--pad-x) 0;
 }
 
 .section:last-of-type {
-  padding-bottom: 100px;
+  padding-bottom: 120px;
 }
 
 .section-title {
   margin: 0;
   font-size: var(--text-2xl);
-  font-weight: 700;
+  font-weight: 800;
   line-height: var(--leading-2xl);
 }
 
@@ -28,34 +28,36 @@
 
 .project-title {
   margin: 0;
-  font-size: var(--text-lg);
-  font-weight: 600;
+  font-size: 1.125rem;
+  font-weight: 700;
   line-height: var(--lh-fold);
 }
 
 .project-sep {
-  color: var(--text-muted);
   line-height: 1;
+  opacity: 0.4;
 }
 
 .project-icons {
   display: flex;
   align-items: center;
   gap: var(--gap-sm);
-  fill: var(--text-muted);
+  fill: var(--text);
 }
 
 .project-desc {
   margin: 0;
   font-size: var(--text-lg);
+  font-weight: 400;
   line-height: var(--lh-fold);
-  color: var(--text-muted);
+  color: var(--text);
 }
 
 .project-details {
   margin: 0.75rem 0 0;
   padding-left: 1.25rem;
   list-style: disc;
+  color: var(--text);
 }
 
 .project-details li {
@@ -68,15 +70,11 @@
   margin-top: 0.25rem;
 }
 
-.project-details ::marker {
-  color: var(--text-muted);
-}
-
 .blog-coming-soon {
   padding: 3.75rem var(--pad-x) 0;
   font-size: var(--text-lg);
   line-height: var(--lh-fold);
-  color: var(--text-muted);
+  color: var(--text);
 }
 
 @media (max-width: 480px) {

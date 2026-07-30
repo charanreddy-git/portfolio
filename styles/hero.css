@@ -1,5 +1,5 @@
 .hero-block {
-  padding: 140px var(--pad-x) 0;
+  padding: 160px var(--pad-x) 0;
 }
 
 .hero {
@@ -22,27 +22,29 @@
   display: flex;
   align-items: center;
   gap: var(--gap-md);
-  fill: var(--text-muted);
+  fill: var(--text);
 }
 
 h1 {
   margin: 0;
   font-size: var(--text-2xl);
-  font-weight: 700;
+  font-weight: 800;
   line-height: var(--leading-2xl);
 }
 
 .title {
   margin: 0;
   font-size: var(--text-lg);
+  font-weight: 400;
   line-height: var(--lh-fold);
-  color: var(--text-muted);
+  color: var(--text);
 }
 
 .intro {
   margin: 0;
   font-size: var(--text-lg);
   line-height: var(--lh-fold);
+  max-width: 520px;
 }
 
 @media (max-width: 480px) {

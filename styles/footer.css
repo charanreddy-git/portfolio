@@ -1,10 +1,10 @@
 .site-footer {
   position: relative;
   z-index: 1;
-  padding: 50px var(--pad-x);
-  border: 1px solid var(--lines);
+  padding: 60px var(--pad-x);
+  border-top: 1px solid var(--lines);
   text-align: center;
-  color: var(--text-subtle);
+  color: var(--text);
   font-size: var(--text-lg);
   line-height: var(--lh-fold);
   background: var(--bg);

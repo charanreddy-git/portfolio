@@ -1,21 +1,16 @@
 :root {
   color-scheme: light;
-  --bg: #fafafa;
+  --bg: #fff;
   --text: #000;
-  --text-muted: #525252;
-  --text-subtle: oklch(70.8% 0 0);
-  --lines: #e5e7eb;
-  --lines-faint: rgb(229 231 235 / 60%);
-  --selection: #e2e1de;
+  --lines: #e5e5e5;
   --sans: "Geist", sans-serif;
   --lh-fold: 1.5625rem;
   --text-lg: 1.0625rem;
-  --text-2xl: 1.4375rem;
-  --leading-2xl: calc(2 / 1.4375);
+  --text-2xl: 1.5rem;
+  --leading-2xl: calc(2 / 1.5);
   --content-max: 1000px;
   --pad-x: 30px;
   --space-15: 3.75rem;
-  --nav-h: 52px;
   --transition-fast: 0.15s ease;
   --gap-sm: 0.75rem;
   --gap-md: 1rem;
@@ -24,17 +19,6 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --font-sm: 0.875rem;
-}
-
-.dark {
-  color-scheme: dark;
-  --bg: #0a0a0a;
-  --text: #f5f5f5;
-  --text-muted: #a3a3a3;
-  --text-subtle: oklch(50% 0 0);
-  --lines: #262626;
-  --lines-faint: rgb(38 38 38 / 60%);
-  --selection: #333;
 }
 
 *,
@@ -67,8 +51,8 @@ a:focus-visible {
 }
 
 ::selection {
-  background: var(--selection);
-  color: var(--text);
+  background: var(--text);
+  color: var(--bg);
 }
 
 .sr-only {

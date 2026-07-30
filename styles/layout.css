@@ -1,33 +1,14 @@
-.bg-pattern {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  color: var(--lines-faint);
-  pointer-events: none;
-}
-
 .page {
   position: relative;
   z-index: 1;
   display: flex;
   min-height: 100vh;
-  padding-top: var(--nav-h);
+  padding-top: 52px;
 }
 
 .gutter {
   display: none;
   flex: 1 1 auto;
-  background: var(--bg);
-}
-
-.gutter--left {
-  border-left: 1px solid var(--lines);
-  padding-left: 1.25rem;
-}
-
-.gutter--right {
-  border-right: 1px solid var(--lines);
-  padding-right: 1.25rem;
 }
 
 .content {
@@ -35,16 +16,9 @@
   max-width: var(--content-max);
   margin: 0 auto;
   background: var(--bg);
-  border-left: 1px solid rgb(229 231 235 / 50%);
-  border-right: 1px solid rgb(229 231 235 / 50%);
   font-family: var(--sans);
   font-size: var(--text-lg);
   line-height: var(--lh-fold);
-}
-
-.dark .content {
-  border-left: 1px solid rgb(38 38 38 / 50%);
-  border-right: 1px solid rgb(38 38 38 / 50%);
 }
 
 .content:focus {

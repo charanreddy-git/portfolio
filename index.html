@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Charan Reddy Puchala — Software Engineer building reliable systems for real-world workflows." />
-    <meta name="theme-color" content="#fafafa" />
-    <title>Charan Reddy — Software Engineer</title>
+    <meta name="theme-color" content="#ffffff" />
+    <title>Charan Reddy</title>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Charan Reddy — Software Engineer" />
     <meta property="og:description" content="Software Engineer building reliable systems for real-world workflows." />
@@ -18,9 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/nav.css" />
-    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/layout.css" />    <link rel="stylesheet" href="styles/hero.css" />
     <link rel="stylesheet" href="styles/icons.css" />
     <link rel="stylesheet" href="styles/components.css" />
     <link rel="stylesheet" href="styles/resume.css" />
@@ -55,38 +53,6 @@
 
     <a href="#main" class="skip-link">Skip to content</a>
 
-    <div class="bg-pattern" aria-hidden="true">
-      <svg width="100%" height="100%">
-        <defs>
-          <pattern id="hatch" viewBox="0 0 10 10" width="8" height="8" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="10" x2="10" y2="0" stroke="currentColor" vector-effect="non-scaling-stroke" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#hatch)" />
-      </svg>
-    </div>
-
-    <nav class="site-nav" aria-label="Main navigation">
-      <div class="nav-inner">
-        <div class="nav-links">
-          <a href="/" class="nav-link active" data-route="/">Home</a>
-          <a href="/projects" class="nav-link" data-route="/projects">Projects</a>
-          <a href="/blog" class="nav-link" data-route="/blog">Blog</a>
-          <a href="/resume" class="nav-link" data-route="/resume">Resume</a>
-        </div>
-        <button class="theme-toggle" type="button" aria-label="Toggle theme">
-          <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-          </svg>
-          <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"/>
-            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-          </svg>
-          <span class="sr-only">Toggle theme</span>
-        </button>
-      </div>
-    </nav>
-
     <div class="page">
       <div class="gutter gutter--left" aria-hidden="true"></div>
 
@@ -118,7 +84,7 @@
                   </a>
                 </nav>
               </div>
-              <p class="intro">I build systems that replace uncertainty with clarity.</p>
+              <p class="intro">I build software.</p>
             </header>
           </div>
 
@@ -128,14 +94,20 @@
             <div class="section-list">
               <article class="project">
                 <div class="project-header">
-                  <h3 class="project-title">TrackProof</h3>
+                  <h3 class="project-title">Bug Bingo</h3>
+                  <span class="project-sep" aria-hidden="true">&middot;</span>
+                  <div class="project-icons">
+                    <a class="icon-link icon-link--lg" href="https://github.com/charanreddy-git/bingo" target="_blank" rel="noopener noreferrer" aria-label="Bug Bingo on GitHub">
+                      <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+                      <span class="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  </div>
                 </div>
-                <p class="project-desc">GPS-verified property evidence for remote buyers.</p>
+                <p class="project-desc">A timed debugging contest platform.</p>
                 <ul class="project-details">
-                  <li>Verifies a field agent&rsquo;s GPS position within 100&thinsp;m before property evidence is accepted.</li>
-                  <li>Tracks every request from dispatch to completion.</li>
-                  <li>Built for NRIs and buyers who can&rsquo;t be on-site.</li>
-                  <li>Stack &mdash; React, Node.js, PostgreSQL, Socket.IO</li>
+                  <li>Monaco-based web IDE with live leaderboard.</li>
+                  <li>Designed for coding events where students debug under time pressure.</li>
+                  <li>Stack &mdash; Bun, JavaScript, Monaco Editor, Judge0</li>
                 </ul>
               </article>
 
@@ -156,18 +128,6 @@
                   <li>Search sales by product code to quickly find specific items.</li>
                   <li>Saves hours of manual data wrangling every week.</li>
                   <li>Stack &mdash; Node.js, Python, Flask, Vercel</li>
-                </ul>
-              </article>
-
-              <article class="project">
-                <div class="project-header">
-                  <h3 class="project-title">Bug Bingo</h3>
-                </div>
-                <p class="project-desc">A timed debugging contest platform.</p>
-                <ul class="project-details">
-                  <li>Monaco-based web IDE with live leaderboard.</li>
-                  <li>Designed for coding events where students debug under time pressure.</li>
-                  <li>Stack &mdash; Bun, JavaScript, Monaco Editor, Judge0</li>
                 </ul>
               </article>
             </div>
@@ -208,7 +168,6 @@
                     </a>
                   </div>
                 </div>
-                <p class="project-desc">Available for contract work on web apps, automation, and internal tools.</p>
               </article>
             </div>
           </section>
