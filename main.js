@@ -39,16 +39,6 @@
       });
   }
 
-  function navigate(route) {
-    if (routes.indexOf(route) === -1) {
-      route = "/";
-    }
-    try {
-      history.pushState({ route: route }, "", route);
-    } catch (_) {}
-    loadPage(route);
-  }
-
   function initResumeEmbed() {
     var frame = document.getElementById("resume-frame");
     var fallback = document.getElementById("resume-fallback");
@@ -130,8 +120,8 @@
       if (path !== "/") {
         loadPage(path);
       }
-    } else {
-      if (path !== "/") { try { history.replaceState(null, "", "/"); } catch (_) {} }
+    } else if (path !== "/") {
+      try { history.replaceState(null, "", "/"); } catch (_) {}
     }
   }
 

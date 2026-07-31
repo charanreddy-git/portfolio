@@ -44,16 +44,6 @@ createServer(function (req, res) {
     }
   }
 
-  const knownRoutes = ["/", "/projects", "/blog", "/resume"];
-  const base = "/" + (url.split("/")[1] || "");
-  if (knownRoutes.indexOf(base) !== -1) {
-    const fallback = join(root, "404.html");
-    if (isFile(fallback)) {
-      send(res, 404, fallback);
-      return;
-    }
-  }
-
   const fallback = join(root, "404.html");
   if (isFile(fallback)) {
     send(res, 404, fallback);
