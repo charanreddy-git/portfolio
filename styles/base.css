@@ -5,6 +5,7 @@
   --text-muted: #555;
   --lines: #e5e5e5;
   --sans: "Geist", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --lh-fold: 1.5625rem;
   --text-lg: 1.0625rem;
   --text-2xl: 1.5rem;

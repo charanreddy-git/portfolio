@@ -101,6 +101,7 @@ export default defineConfig([
     ignores: [
     "resume/",
     "config.js",
+    "vendor/",
       "node_modules/"
     ]
   }
