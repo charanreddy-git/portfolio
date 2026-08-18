@@ -10,7 +10,7 @@
 }
 
 .resume-page .hero {
-  gap: 0.25rem;
+  gap: var(--gap-md);
 }
 
 .resume-page .section {

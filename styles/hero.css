@@ -1,5 +1,5 @@
 .hero-block {
-  padding: 160px var(--pad-x) 0;
+  padding: 128px var(--pad-x) 0;
 }
 
 .hero {
@@ -27,9 +27,9 @@
 
 h1 {
   margin: 0;
-  font-size: var(--text-2xl);
+  font-size: 1.75rem;
   font-weight: 800;
-  line-height: var(--leading-2xl);
+  line-height: 1.25;
 }
 
 .title {
@@ -37,7 +37,7 @@ h1 {
   font-size: var(--text-lg);
   font-weight: 400;
   line-height: var(--lh-fold);
-  color: var(--text);
+  color: var(--text-muted);
 }
 
 .intro {
@@ -45,6 +45,32 @@ h1 {
   font-size: var(--text-lg);
   line-height: var(--lh-fold);
   max-width: 520px;
+  color: var(--text-muted);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-lg);
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 @media (max-width: 480px) {

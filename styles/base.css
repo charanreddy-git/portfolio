@@ -2,6 +2,7 @@
   color-scheme: light;
   --bg: #fff;
   --text: #000;
+  --text-muted: #555;
   --lines: #e5e5e5;
   --sans: "Geist", sans-serif;
   --lh-fold: 1.5625rem;

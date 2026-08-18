@@ -4,8 +4,8 @@
   padding: 60px var(--pad-x);
   border-top: 1px solid var(--lines);
   text-align: center;
-  color: var(--text);
-  font-size: var(--text-lg);
+  color: var(--text-muted);
+  font-size: var(--font-sm);
   line-height: var(--lh-fold);
   background: var(--bg);
 }

@@ -1,9 +1,9 @@
 .section {
-  padding: 120px var(--pad-x) 0;
+  padding: 96px var(--pad-x) 0;
 }
 
 .section:last-of-type {
-  padding-bottom: 120px;
+  padding-bottom: 96px;
 }
 
 .section-title {
@@ -50,14 +50,14 @@
   font-size: var(--text-lg);
   font-weight: 400;
   line-height: var(--lh-fold);
-  color: var(--text);
+  color: var(--text-muted);
 }
 
 .project-details {
   margin: 0.75rem 0 0;
   padding-left: 1.25rem;
   list-style: disc;
-  color: var(--text);
+  color: var(--text-muted);
 }
 
 .project-details li {
@@ -70,50 +70,28 @@
   margin-top: 0.25rem;
 }
 
-.blog-coming-soon {
-  padding: 3.75rem var(--pad-x) 0;
-  font-size: var(--text-lg);
-  line-height: var(--lh-fold);
-  color: var(--text);
-}
-
-.quote-grid {
+.achievement-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--gap-lg);
   margin-top: var(--space-15);
 }
 
-.quote-card {
+.achievement {
   margin: 0;
-  padding: var(--gap-lg) var(--gap-lg) var(--gap-md);
-  border: 1px solid var(--lines);
-  border-radius: var(--radius-md);
-  position: relative;
 }
 
-.quote-mark {
-  position: absolute;
-  top: 0.25rem;
-  left: 0.75rem;
-  font-size: 2.5rem;
-  line-height: 1;
-  font-weight: 800;
-  opacity: 0.15;
-  pointer-events: none;
-}
-
-.quote-text {
+.achievement-text {
   margin: 0;
   font-size: var(--text-lg);
   line-height: var(--lh-fold);
   font-weight: 600;
 }
 
-.quote-attribution {
-  margin-top: 0.4rem;
+.achievement-org {
+  margin: 0.15rem 0 0;
   font-size: var(--font-sm);
-  opacity: 0.5;
+  color: var(--text-muted);
 }
 
 .stack-tags {
@@ -131,12 +109,17 @@
   padding: 0.25rem 0.6rem;
   border: 1px solid var(--lines);
   border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.stack-tag:hover {
   color: var(--text);
-  opacity: 0.75;
+  border-color: #c8c8c8;
 }
 
 @media (min-width: 640px) {
-  .quote-grid {
+  .achievement-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
