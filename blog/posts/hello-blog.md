@@ -1,4 +1,9 @@
-This is the first post — mostly a test drive of the setup. I write Markdown in a file, add one line to a manifest, push, and it's live. No build step, no CMS.
+---
+title: Hello, blog
+date: 2026-08-17
+---
+
+This is the first post — mostly a test drive of the setup. I write Markdown in a file with a frontmatter header, run one command, push, and it's live. No CMS, no server.
 
 ## What to expect
 

@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node scripts/serve.mjs",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "new-post": "node scripts/new-post.mjs",
+    "blog:build": "node scripts/build-blog-index.mjs"
   },
   "devDependencies": {
     "eslint": "^9.0.0",
