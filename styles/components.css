@@ -70,25 +70,32 @@
   margin-top: 0.25rem;
 }
 
-.achievement-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--gap-lg);
-  margin-top: var(--space-15);
+.achievement-list {
+  margin: var(--space-15) 0 0;
+  padding: 0;
+  list-style: none;
 }
 
 .achievement {
-  margin: 0;
+  padding: var(--gap-lg) 0;
 }
 
-.achievement-text {
+.achievement:first-child {
+  padding-top: 0;
+}
+
+.achievement + .achievement {
+  border-top: 1px solid var(--lines);
+}
+
+.achievement-title {
   margin: 0;
   font-size: var(--text-lg);
   line-height: var(--lh-fold);
   font-weight: 600;
 }
 
-.achievement-org {
+.achievement-meta {
   margin: 0.15rem 0 0;
   font-size: var(--font-sm);
   color: var(--text-muted);
@@ -116,12 +123,6 @@
 .stack-tag:hover {
   color: var(--text);
   border-color: #c8c8c8;
-}
-
-@media (min-width: 640px) {
-  .achievement-grid {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (max-width: 480px) {
