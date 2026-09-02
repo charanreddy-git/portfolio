@@ -15,7 +15,6 @@
         min-height: 100vh;
         margin: 0;
         padding: 2rem;
-        background: var(--bg);
         color: var(--text);
         font-family: var(--sans);
       }
@@ -58,8 +57,8 @@
       (function () {
         sessionStorage.setItem("spa-path", location.pathname);
         var path = location.pathname;
-        var validRoutes = ["/", "/projects", "/blog", "/resume"];
-        if (path && (validRoutes.indexOf(path) !== -1 || path.indexOf("/blog/") === 0)) {
+        var validRoutes = ["/", "/projects", "/blogs"];
+        if (path && (validRoutes.indexOf(path) !== -1 || path.indexOf("/blogs/") === 0)) {
           location.replace("/");
         }
       })();

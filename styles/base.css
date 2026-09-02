@@ -1,17 +1,31 @@
 :root {
   color-scheme: light;
   --bg: #fff;
-  --text: #000;
-  --text-muted: #555;
-  --lines: #e5e5e5;
+  --bg-warm: #fafaf9;
+  --text: #0a0a0a;
+  --text-muted: #525252;
+  --text-faint: #767676;
+  --lines: #ececec;
+  --lines-strong: #d4d4d4;
+  --grid-color: #f8f8f8;
+  --grid-size: 42px;
   --sans: "Geist", sans-serif;
+  --serif: "Lora", Georgia, serif;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --lh-body: 1.7;
   --lh-fold: 1.5625rem;
   --text-lg: 1.0625rem;
   --text-2xl: 1.5rem;
   --leading-2xl: calc(2 / 1.5);
-  --content-max: 1000px;
-  --pad-x: 30px;
+  --content-max: 1024px;
+  --content-narrow: 680px;
+  --header-height: 56px;
+  --pad-x: 16px;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
   --space-15: 3.75rem;
   --transition-fast: 0.15s ease;
   --gap-sm: 0.75rem;
@@ -23,23 +37,63 @@
   --font-sm: 0.875rem;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --pad-x: 12px;
+    --content-max: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --pad-x: 10px;
+  }
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html {
+  background: var(--bg);
+}
+
+html {
+  font-size: 17px;
+}
+
 html,
 body {
   margin: 0;
   min-height: 100%;
-  background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
   font-size: var(--text-lg);
-  line-height: var(--lh-fold);
+  line-height: var(--lh-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  letter-spacing: -0.011em;
+}
+
+body {
+  position: relative;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  background-position: 0 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(ellipse 900px 500px at 50% -8%, rgba(0, 0, 0, 0.03), transparent 62%);
 }
 
 a {

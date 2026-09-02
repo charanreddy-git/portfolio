@@ -4,69 +4,35 @@
     <header class="hero">
       <div class="hero-top">
         <div class="hero-identity">
-          <h1>Projects</h1>
+          <h1 class="projects-title">Projects (2)</h1>
         </div>
       </div>
-      <p class="intro">Things I&rsquo;ve built that I&rsquo;m proud of.</p>
-      <nav class="site-nav" aria-label="Pages">
-        <a class="nav-link" href="/">Home</a>
-        <a class="nav-link" href="/projects" aria-current="page">Projects</a>
-        <a class="nav-link" href="/blog">Blog</a>
-        <a class="nav-link" href="/resume">Resume</a>
-      </nav>
+
     </header>
   </div>
 
-  <section class="section" aria-label="Projects list">
-    <div class="section-list">
-      <article class="project">
-        <div class="project-header">
-          <h3 class="project-title">Bug Bingo</h3>
-          <span class="project-sep" aria-hidden="true">&middot;</span>
-          <div class="project-icons">
-            <a class="icon-link icon-link--lg" href="https://github.com/charanreddy-git/bingo" target="_blank" rel="noopener noreferrer" aria-label="Bug Bingo on GitHub">
-              <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
-              <span class="sr-only"> (opens in a new tab)</span>
-            </a>
-          </div>
-        </div>
-        <p class="project-desc">A live competitive debugging platform.</p>
-        <ul class="project-details">
-          <li>Real-time team registration and scoring with a live leaderboard, under 50 concurrent users.</li>
-          <li>Automated judging via the Judge0 API across 4 languages.</li>
-        </ul>
-        <ul class="stack-tags" aria-label="Technologies used">
-          <li class="stack-tag">Bun</li>
-          <li class="stack-tag">PostgreSQL</li>
-          <li class="stack-tag">JavaScript</li>
-          <li class="stack-tag">Judge0</li>
-        </ul>
+  <section class="section section--projects" aria-label="Projects list">
+    <div class="projects-grid">
+      <article class="project-card">
+        <h3 class="project-card-title">
+          <a class="project-card-link" href="https://github.com/charanreddy-git/bingo" target="_blank" rel="noopener noreferrer">Bug Bingo</a>
+        </h3>
+        <p class="project-card-desc">A live competitive debugging platform.</p>
+        <p class="project-card-meta">Bun &middot; PostgreSQL &middot; JavaScript</p>
+        <p class="project-card-links">
+          <a href="https://github.com/charanreddy-git/bingo" target="_blank" rel="noopener noreferrer">[code]</a>
+        </p>
       </article>
 
-      <article class="project">
-        <div class="project-header">
-          <h3 class="project-title">DaySale</h3>
-          <span class="project-sep" aria-hidden="true">&middot;</span>
-          <div class="project-icons">
-            <a class="icon-link icon-link--lg" href="https://github.com/charanreddy-git/daysale" target="_blank" rel="noopener noreferrer" aria-label="DaySale on GitHub">
-              <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
-              <span class="sr-only"> (opens in a new tab)</span>
-            </a>
-          </div>
-        </div>
-        <p class="project-desc">Instant daily sales summaries — built for my dad's company.</p>
-        <ul class="project-details">
-          <li>Dual HTML/PDF parsers (Cheerio + pdfplumber) standardize 20+ product codes into one clean schema.</li>
-          <li>Serverless on Vercel — fast and maintenance-free.</li>
-        </ul>
-        <ul class="stack-tags" aria-label="Technologies used">
-          <li class="stack-tag">Node.js</li>
-          <li class="stack-tag">Express</li>
-          <li class="stack-tag">Python</li>
-          <li class="stack-tag">Flask</li>
-          <li class="stack-tag">pdfplumber</li>
-          <li class="stack-tag">Vercel</li>
-        </ul>
+      <article class="project-card">
+        <h3 class="project-card-title">
+          <a class="project-card-link" href="https://github.com/charanreddy-git/daysale" target="_blank" rel="noopener noreferrer">DaySale</a>
+        </h3>
+        <p class="project-card-desc">Instant daily sales summaries — built for my dad's company.</p>
+        <p class="project-card-meta">Node.js &middot; Python &middot; Flask</p>
+        <p class="project-card-links">
+          <a href="https://github.com/charanreddy-git/daysale" target="_blank" rel="noopener noreferrer">[code]</a>
+        </p>
       </article>
     </div>
   </section>

@@ -1,22 +1,60 @@
 (function () {
   "use strict";
 
-  const routes = ["/", "/projects", "/blog", "/resume"];
+  const routes = ["/", "/projects", "/blogs"];
   const pageTitles = {
     "/": "Charan Reddy",
     "/projects": "Projects — Charan Reddy",
-    "/blog": "Blog — Charan Reddy",
-    "/resume": "Resume — Charan Reddy"
+    "/blogs": "Blogs — Charan Reddy"
   };
   const mainEl = document.getElementById("main");
+  const headerEl = document.getElementById("site-header");
+  const headerNav = headerEl ? headerEl.querySelector(".site-header-nav") : null;
+  const burgerBtn = headerEl ? headerEl.querySelector(".site-header-burger") : null;
   const pageCache = {};
   let postsPromise = null;
+
+  function syncHeaderNav(route) {
+    if (!headerNav) { return; }
+    var links = headerNav.querySelectorAll(".site-nav-link");
+    var isPost = route.indexOf("/blogs/") === 0;
+    var base = isPost ? "/blogs" : route;
+    links.forEach(function (a) {
+      var href = a.getAttribute("href");
+      if (href === base) {
+        a.setAttribute("aria-current", "page");
+      } else {
+        a.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function closeHeaderMenu() {
+    if (!headerEl || !burgerBtn) { return; }
+    headerEl.classList.remove("is-open");
+    burgerBtn.setAttribute("aria-expanded", "false");
+  }
+
+  if (burgerBtn && headerEl) {
+    burgerBtn.addEventListener("click", function () {
+      var isOpen = headerEl.classList.toggle("is-open");
+      burgerBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+    document.addEventListener("click", function (e) {
+      if (!headerEl.classList.contains("is-open")) { return; }
+      if (headerEl.contains(e.target)) { return; }
+      closeHeaderMenu();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { closeHeaderMenu(); }
+    });
+  }
 
   function matchRoute(path) {
     if (routes.indexOf(path) !== -1) {
       return path;
     }
-    if (/^\/blog\/[a-z0-9][a-z0-9-]*$/i.test(path)) {
+    if (/^\/blogs\/[a-z0-9][a-z0-9-]*$/i.test(path)) {
       return path;
     }
     return null;
@@ -37,17 +75,19 @@
   function injectPage(html, route) {
     mainEl.innerHTML = html;
     document.title = pageTitles[route] || "Charan Reddy";
-    if (route === "/resume") {
-      initResumeEmbed();
-    }
-    if (route === "/blog") {
+    syncHeaderNav(route);
+    closeHeaderMenu();
+    if (route === "/blogs") {
       initBlogIndex();
+    }
+    if (route === "/") {
+      initHomeBlogs();
     }
   }
 
   function loadPostsIndex() {
     if (!postsPromise) {
-      postsPromise = fetch("blog/posts.json").then(function (res) {
+      postsPromise = fetch("blogs/posts.json").then(function (res) {
         if (!res.ok) { throw new Error("Failed to load posts index"); }
         return res.json();
       });
@@ -66,7 +106,26 @@
         return;
       }
       listEl.innerHTML = posts.map(function (post) {
-        return '<li class="post-item"><a class="post-link" href="/blog/' + escapeHtml(post.slug) + '"><span class="post-title">' + escapeHtml(post.title) + '</span><span class="post-date">' + escapeHtml(post.date) + "</span></a></li>";
+        return '<li class="post-item"><span class="post-date">' + escapeHtml(post.date) + '</span><a class="post-link" href="/blogs/' + escapeHtml(post.slug) + '"><span class="post-title">' + escapeHtml(post.title) + "</span></a></li>";
+      }).join("");
+      listEl.hidden = false;
+    }).catch(function () {
+      emptyEl.hidden = false;
+    });
+  }
+
+  function initHomeBlogs() {
+    var listEl = document.getElementById("home-post-list");
+    var emptyEl = document.getElementById("home-blog-empty");
+    if (!listEl || !emptyEl) { return; }
+    loadPostsIndex().then(function (posts) {
+      if (!posts.length) {
+        emptyEl.hidden = false;
+        return;
+      }
+      var recent = posts.slice(0, 6);
+      listEl.innerHTML = recent.map(function (post) {
+        return '<li class="post-item"><span class="post-date">' + escapeHtml(post.date) + '</span><a class="post-link" href="/blogs/' + escapeHtml(post.slug) + '"><span class="post-title">' + escapeHtml(post.title) + "</span></a></li>";
       }).join("");
       listEl.hidden = false;
     }).catch(function () {
@@ -79,22 +138,16 @@
       '<div class="hero-block"><header class="hero">' +
       '<div class="hero-top"><div class="hero-identity"><h1>' + escapeHtml(title) + "</h1></div></div>" +
       (date ? '<p class="post-hero-date">' + escapeHtml(date) + "</p>" : "") +
-      '<nav class="site-nav" aria-label="Pages">' +
-      '<a class="nav-link" href="/">Home</a>' +
-      '<a class="nav-link" href="/projects">Projects</a>' +
-      '<a class="nav-link" href="/blog" aria-current="page">Blog</a>' +
-      '<a class="nav-link" href="/resume">Resume</a>' +
-      "</nav>" +
       "</header></div>" +
       '<section class="section"><article class="post-body">' + bodyHtml + "</article></section>" +
       "</div>";
   }
 
   function loadPost(path) {
-    var slug = path.slice("/blog/".length);
+    var slug = path.slice("/blogs/".length);
     Promise.all([
       loadPostsIndex(),
-      fetch("blog/posts/" + slug + ".md").then(function (res) {
+      fetch("blogs/posts/" + slug + ".md").then(function (res) {
         if (!res.ok) { throw new Error("Failed to load post"); }
         return res.text();
       })
@@ -112,7 +165,7 @@
       injectPage(html, path);
       document.title = title + " — Charan Reddy";
     }).catch(function () {
-      injectPage(postShell("Post not found", "", '<p>This post doesn&rsquo;t exist (yet). <a href="/blog">Back to the blog</a>.</p>'), path);
+      injectPage(postShell("Post not found", "", '<p>This post doesn&rsquo;t exist (yet). <a href="/blogs">Back to blogs</a>.</p>'), path);
     });
   }
 
@@ -128,7 +181,7 @@
       return;
     }
 
-    if (route.indexOf("/blog/") === 0) {
+    if (route.indexOf("/blogs/") === 0) {
       loadPost(route);
       return;
     }
@@ -146,67 +199,6 @@
       .catch(function () {
         mainEl.innerHTML = "";
       });
-  }
-
-  function initResumeEmbed() {
-    var frame = document.getElementById("resume-frame");
-    var fallback = document.getElementById("resume-fallback");
-    if (!frame) { return; }
-
-    function setFallback(message) {
-      if (!fallback) { return; }
-      fallback.textContent = message;
-      fallback.hidden = false;
-    }
-
-    function clearFallback() {
-      if (!fallback) { return; }
-      fallback.hidden = true;
-      fallback.textContent = "";
-    }
-
-    function parseResumeUrls(rawUrl) {
-      var url = rawUrl.trim();
-      var fileIdMatch = url.match(/(?:\/d\/|id=)([a-zA-Z0-9_-]{20,})/);
-      if (!fileIdMatch) {
-        return { preview: url, open: url, download: url };
-      }
-      var fileId = fileIdMatch[1];
-      return {
-        preview: "https://drive.google.com/file/d/" + fileId + "/preview",
-        open: "https://drive.google.com/file/d/" + fileId + "/view",
-        download: "https://drive.google.com/uc?export=download&id=" + fileId
-      };
-    }
-
-    var url = window.SITE_CONFIG && window.SITE_CONFIG.resumeUrl;
-    if (!url || url === "#" || url.indexOf("YOUR_") !== -1) {
-      setFallback("Resume is not configured yet.");
-      return;
-    }
-
-    var urls = parseResumeUrls(url);
-    var completed = false;
-    var timeoutId = window.setTimeout(function () {
-      if (completed) { return; }
-      setFallback("Preview is unavailable in this browser. Use Open in new tab or Download PDF.");
-    }, 4500);
-
-    frame.addEventListener("load", function () {
-      if (completed) { return; }
-      completed = true;
-      window.clearTimeout(timeoutId);
-      clearFallback();
-    }, { once: true });
-
-    frame.addEventListener("error", function () {
-      if (completed) { return; }
-      completed = true;
-      window.clearTimeout(timeoutId);
-      setFallback("Preview failed to load. Use Open in new tab or Download PDF.");
-    }, { once: true });
-
-    frame.src = urls.preview;
   }
 
   window.addEventListener("popstate", function () {
@@ -233,10 +225,13 @@
 
   function init() {
     pageCache["/"] = mainEl.innerHTML;
+    initHomeBlogs();
 
     var stored = sessionStorage.getItem("spa-path");
     sessionStorage.removeItem("spa-path");
     var path = stored || location.pathname;
+
+    syncHeaderNav(matchRoute(path) || "/");
 
     if (matchRoute(path)) {
       if (path !== "/") {

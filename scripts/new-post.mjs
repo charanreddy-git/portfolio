@@ -5,7 +5,7 @@ import { buildIndex } from "./build-blog-index.mjs";
 import { slugify } from "./blog-lib.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const postsDir = join(root, "blog", "posts");
+const postsDir = join(root, "blogs", "posts");
 
 const title = process.argv.slice(2).join(" ").trim();
 if (!title) {
@@ -21,7 +21,7 @@ if (!slug) {
 
 const filePath = join(postsDir, slug + ".md");
 if (existsSync(filePath)) {
-  console.error("blog/posts/" + slug + ".md already exists.");
+  console.error("blogs/posts/" + slug + ".md already exists.");
   process.exit(1);
 }
 
@@ -30,4 +30,4 @@ const contents = "---\ntitle: " + title + "\ndate: " + date + "\n---\n\nWrite yo
 
 writeFileSync(filePath, contents);
 buildIndex();
-console.log("Created blog/posts/" + slug + ".md and updated blog/posts.json");
+console.log("Created blogs/posts/" + slug + ".md and updated blogs/posts.json");

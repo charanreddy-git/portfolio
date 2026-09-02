@@ -1,18 +1,27 @@
 .section {
-  padding: 96px var(--pad-x) 0;
+  padding: 48px var(--pad-x) 0;
+  background: var(--bg);
+  border: none;
+  position: relative;
 }
 
 .section:last-of-type {
-  padding-bottom: 96px;
+  padding-bottom: 48px;
+  border: none;
+  box-shadow: none;
 }
+
+/* keep grid continuity inside content: subtle inner border already done */
 
 .section-title {
   margin: 0;
   font-size: var(--text-2xl);
   font-weight: 800;
   line-height: var(--leading-2xl);
+  letter-spacing: -0.02em;
 }
 
+/* keep old home-page list for backwards compat, but new arpit-style below */
 .section-list {
   display: flex;
   flex-direction: column;
@@ -68,6 +77,110 @@
 
 .project-details li + li {
   margin-top: 0.25rem;
+}
+
+/* ---- Arpit /projects — B&W card grid ---- */
+.projects-title {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+.section--projects {
+  padding-top: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 0;
+}
+
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg);
+  border: 1px solid var(--lines);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+}
+
+.project-card:hover {
+  border-color: #d6d6d6;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.project-card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.project-card-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.project-card-link:hover,
+.project-card-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+.project-card-desc {
+  margin: 0.6rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  flex-grow: 1;
+}
+
+.project-card-meta {
+  margin: 0.9rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--text-faint);
+  letter-spacing: -0.01em;
+}
+
+.project-card-links {
+  margin: 0.6rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.project-card-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 0.85rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.project-card-links a:hover,
+.project-card-links a:focus-visible {
+  border-bottom-color: var(--text);
 }
 
 .achievement-list {
@@ -127,14 +240,24 @@
 
 @media (max-width: 480px) {
   .section {
-    padding-top: 60px;
+    padding-top: 36px;
   }
 
   .section:last-of-type {
-    padding-bottom: 60px;
+    padding-bottom: 36px;
   }
 
   .section-list {
-    gap: 2.5rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    gap: 1rem;
+  }
+
+  .project-card {
+    padding: 1.1rem;
   }
 }

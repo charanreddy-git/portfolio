@@ -15,7 +15,7 @@ npm run lint    # Run ESLint
 npm run new-post -- "My Post Title"
 ```
 
-This creates `blog/posts/my-post-title.md` with a frontmatter header (`title`, `date`) pre-filled and registers it in `blog/posts.json`. Write the post, then `git push` — that's it.
+This creates `blogs/posts/my-post-title.md` with a frontmatter header (`title`, `date`) pre-filled and registers it in `blogs/posts.json`. Write the post, then `git push` — that's it.
 
-If you edit a post's frontmatter (e.g. change the title) or add/remove `.md` files by hand, run `npm run blog:build` to regenerate `blog/posts.json` from the frontmatter in `blog/posts/*.md`. Never edit `blog/posts.json` directly — it's generated.
+If you edit a post's frontmatter (e.g. change the title) or add/remove `.md` files by hand, run `npm run blog:build` to regenerate `blogs/posts.json` from the frontmatter in `blogs/posts/*.md`. Never edit `blogs/posts.json` directly — it's generated.
 

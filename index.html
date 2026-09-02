@@ -16,14 +16,13 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/layout.css" />
     <link rel="stylesheet" href="styles/hero.css" />
     <link rel="stylesheet" href="styles/icons.css" />
     <link rel="stylesheet" href="styles/components.css" />
-    <link rel="stylesheet" href="styles/resume.css" />
-    <link rel="stylesheet" href="styles/blog.css" />
+    <link rel="stylesheet" href="styles/blogs.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <script>if(!sessionStorage.getItem("spa-path"))sessionStorage.setItem("spa-path",location.pathname);</script>
   </head>
@@ -49,127 +48,61 @@
 
     <a href="#main" class="skip-link">Skip to content</a>
 
-    <div class="page">
-      <div class="gutter gutter--left" aria-hidden="true"></div>
+    <header class="site-header" id="site-header">
+      <div class="site-header-inner">
+        <a class="site-brand" href="/">Charan Reddy</a>
+        <nav class="site-header-nav" aria-label="Primary">
+          <a class="site-nav-link" href="/projects">Projects</a>
+          <a class="site-nav-link" href="/blogs">Blogs</a>
+        </nav>
+        <button class="site-header-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-header-nav">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
 
+    <div class="page">
       <main id="main" class="content" tabindex="-1">
         <div class="page-section" data-page="home">
 
-          <div class="hero-block">
+          <div class="hero-block hero-block--home">
             <header class="hero">
-              <div class="hero-top">
-                <div class="hero-identity">
-                  <h1>Charan Reddy</h1>
-                  <p class="title">Software Engineer</p>
-                </div>
-                <nav class="hero-links" aria-label="Primary links">
-                  <a class="icon-link icon-link--lg" href="https://www.linkedin.com/in/puchala-charanreddy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
-                    <span class="sr-only"> (opens in a new tab)</span>
-                  </a>
-                  <a class="icon-link icon-link--lg" href="https://x.com/charanstwt" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                    <svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg>
-                    <span class="sr-only"> (opens in a new tab)</span>
-                  </a>
-                  <a class="icon-link icon-link--lg" href="https://github.com/charanreddy-git" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
-                    <span class="sr-only"> (opens in a new tab)</span>
-                  </a>
-                  <a class="icon-link icon-link--lg" href="mailto:charanreddy.puchala@gmail.com" aria-label="Email charanreddy.puchala@gmail.com">
-                    <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
-                  </a>
-                </nav>
+              <h1 class="hello-title">Hey, I am Charan</h1>
+              <h3 class="hello-subtitle">always building. always learning.</h3>
+              <div class="hero-bio">
+                <p>I am a software engineer who likes building simple, reliable tools for real work.</p>
+                <p>I enjoy taking ideas from start to finish and making them actually work.</p>
+                <p>I built<br /><a href="/projects">Bug Bingo</a> — a live game where teams fix bugs together and gets score.<br /><a href="/projects">DaySale</a> — a simple tool that helps my dad's see daily sales clearly from messy files.</p>
               </div>
-              <p class="intro">I build software.</p>
-              <nav class="site-nav" aria-label="Pages">
-                <a class="nav-link" href="/projects">Projects</a>
-                <a class="nav-link" href="/blog">Blog</a>
-                <a class="nav-link" href="/resume">Resume</a>
+              <nav class="hero-links" aria-label="Social links">
+                <a class="icon-link icon-link--lg" href="https://www.linkedin.com/in/puchala-charanreddy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg><span class="sr-only"> (opens in a new tab)</span>
+                </a>
+                <a class="icon-link icon-link--lg" href="https://x.com/charanstwt" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg><span class="sr-only"> (opens in a new tab)</span>
+                </a>
+                <a class="icon-link icon-link--lg" href="https://github.com/charanreddy-git" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg><span class="sr-only"> (opens in a new tab)</span>
+                </a>
+                <a class="icon-link icon-link--lg" href="mailto:charanreddy.puchala@gmail.com" aria-label="Email">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+                </a>
               </nav>
             </header>
           </div>
 
-          <section class="section" aria-labelledby="projects-heading">
-            <h2 id="projects-heading" class="section-title">Projects</h2>
 
-            <div class="section-list">
-              <article class="project">
-                <div class="project-header">
-                  <h3 class="project-title">Bug Bingo</h3>
-                  <span class="project-sep" aria-hidden="true">&middot;</span>
-                  <div class="project-icons">
-                    <a class="icon-link icon-link--lg" href="https://github.com/charanreddy-git/bingo" target="_blank" rel="noopener noreferrer" aria-label="Bug Bingo on GitHub">
-                      <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
-                      <span class="sr-only"> (opens in a new tab)</span>
-                    </a>
-                  </div>
-                </div>
-                <p class="project-desc">A live competitive debugging platform.</p>
-                <ul class="project-details">
-                  <li>Real-time team registration and scoring with a live leaderboard, under 50 concurrent users.</li>
-                  <li>Automated judging via the Judge0 API across 4 languages.</li>
-                </ul>
-                <ul class="stack-tags" aria-label="Technologies used">
-                  <li class="stack-tag">Bun</li>
-                  <li class="stack-tag">PostgreSQL</li>
-                  <li class="stack-tag">JavaScript</li>
-                  <li class="stack-tag">Judge0</li>
-                </ul>
-              </article>
 
-              <article class="project">
-                <div class="project-header">
-                  <h3 class="project-title">DaySale</h3>
-                  <span class="project-sep" aria-hidden="true">&middot;</span>
-                  <div class="project-icons">
-                    <a class="icon-link icon-link--lg" href="https://github.com/charanreddy-git/daysale" target="_blank" rel="noopener noreferrer" aria-label="DaySale on GitHub">
-                      <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
-                      <span class="sr-only"> (opens in a new tab)</span>
-                    </a>
-                  </div>
-                </div>
-                <p class="project-desc">Instant daily sales summaries — built for my dad's company.</p>
-                <ul class="project-details">
-                  <li>Dual HTML/PDF parsers (Cheerio + pdfplumber) standardize 20+ product codes into one clean schema.</li>
-                  <li>Serverless on Vercel — fast and maintenance-free.</li>
-                </ul>
-                <ul class="stack-tags" aria-label="Technologies used">
-                  <li class="stack-tag">Node.js</li>
-                  <li class="stack-tag">Express</li>
-                  <li class="stack-tag">Python</li>
-                  <li class="stack-tag">Flask</li>
-                  <li class="stack-tag">pdfplumber</li>
-                  <li class="stack-tag">Vercel</li>
-                </ul>
-              </article>
-            </div>
-          </section>
 
-          <section class="section" aria-labelledby="achievements-heading">
-            <h2 id="achievements-heading" class="section-title">Achievements</h2>
-            <ul class="achievement-list">
-              <li class="achievement">
-                <p class="achievement-title">1st Place &middot; GeekWeek Coding Contest</p>
-                <p class="achievement-meta">SNIST &middot; 2024</p>
-              </li>
-              <li class="achievement">
-                <p class="achievement-title">1st Place &middot; Code &amp; Escape</p>
-                <p class="achievement-meta">BVRIT Women&rsquo;s Engineering College &middot; 2026</p>
-              </li>
-            </ul>
-          </section>
 
         </div>
       </main>
-
-      <div class="gutter gutter--right" aria-hidden="true"></div>
     </div>
 
     <footer class="site-footer">
       <p>&copy; 2026 Charan Reddy</p>
     </footer>
 
-    <script src="config.js"></script>
     <script src="vendor/marked.js" defer></script>
     <script src="main.js" defer></script>
   </body>

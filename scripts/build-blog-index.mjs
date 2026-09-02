@@ -4,8 +4,8 @@ import { fileURLToPath } from "node:url";
 import { parseFrontmatter } from "./blog-lib.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const postsDir = join(root, "blog", "posts");
-const indexPath = join(root, "blog", "posts.json");
+const postsDir = join(root, "blogs", "posts");
+const indexPath = join(root, "blogs", "posts.json");
 const slugPattern = /^[a-z0-9][a-z0-9-]*$/;
 
 export function buildIndex() {
@@ -39,5 +39,5 @@ export function buildIndex() {
 
 if (fileURLToPath(import.meta.url) === process.argv[1]) {
   const posts = buildIndex();
-  console.log("Wrote blog/posts.json (" + posts.length + " post" + (posts.length === 1 ? "" : "s") + ")");
+  console.log("Wrote blogs/posts.json (" + posts.length + " post" + (posts.length === 1 ? "" : "s") + ")");
 }

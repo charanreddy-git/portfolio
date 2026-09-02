@@ -1,13 +1,14 @@
 .site-footer {
   position: relative;
   z-index: 1;
-  padding: 60px var(--pad-x);
-  border-top: 1px solid var(--lines);
+  padding: 40px var(--pad-x);
+  border-top: 1px solid var(--lines-strong);
   text-align: center;
   color: var(--text-muted);
   font-size: var(--font-sm);
   line-height: var(--lh-fold);
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
 }
 
 .site-footer p {
