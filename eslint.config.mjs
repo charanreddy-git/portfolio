@@ -99,7 +99,7 @@ export default defineConfig([
   },
   {
     ignores: [
-    "vendor/",
+    "public/vendor/",
       "node_modules/"
     ]
   }

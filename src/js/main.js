@@ -87,7 +87,7 @@
 
   function loadPostsIndex() {
     if (!postsPromise) {
-      postsPromise = fetch("blogs/posts.json").then(function (res) {
+      postsPromise = fetch("src/content/blogs/posts.json").then(function (res) {
         if (!res.ok) { throw new Error("Failed to load posts index"); }
         return res.json();
       });
@@ -147,7 +147,7 @@
     var slug = path.slice("/blogs/".length);
     Promise.all([
       loadPostsIndex(),
-      fetch("blogs/posts/" + slug + ".md").then(function (res) {
+      fetch("src/content/blogs/posts/" + slug + ".md").then(function (res) {
         if (!res.ok) { throw new Error("Failed to load post"); }
         return res.text();
       })
@@ -187,7 +187,7 @@
     }
 
     name = route.slice(1);
-    fetch("pages/" + name + ".html")
+    fetch("src/pages/" + name + ".html")
       .then(function (res) {
         if (!res.ok) { throw new Error("Failed to load " + name); }
         return res.text();

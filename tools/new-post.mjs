@@ -2,10 +2,10 @@ import { existsSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildIndex } from "./build-blog-index.mjs";
-import { slugify } from "./blog-lib.mjs";
+import { slugify } from "./lib/blog-lib.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const postsDir = join(root, "blogs", "posts");
+const postsDir = join(root, "src", "content", "blogs", "posts");
 
 const title = process.argv.slice(2).join(" ").trim();
 if (!title) {
@@ -21,7 +21,7 @@ if (!slug) {
 
 const filePath = join(postsDir, slug + ".md");
 if (existsSync(filePath)) {
-  console.error("blogs/posts/" + slug + ".md already exists.");
+  console.error("src/content/blogs/posts/" + slug + ".md already exists.");
   process.exit(1);
 }
 
@@ -30,4 +30,4 @@ const contents = "---\ntitle: " + title + "\ndate: " + date + "\n---\n\nWrite yo
 
 writeFileSync(filePath, contents);
 buildIndex();
-console.log("Created blogs/posts/" + slug + ".md and updated blogs/posts.json");
+console.log("Created src/content/blogs/posts/" + slug + ".md and updated src/content/blogs/posts.json");

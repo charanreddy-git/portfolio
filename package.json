@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node scripts/serve.mjs",
+    "start": "node tools/serve.mjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "new-post": "node scripts/new-post.mjs",
-    "blog:build": "node scripts/build-blog-index.mjs"
+    "new-post": "node tools/new-post.mjs",
+    "blog:build": "node tools/build-blog-index.mjs"
   },
   "devDependencies": {
     "eslint": "^9.0.0",
