@@ -51,10 +51,10 @@
 
     <header class="site-header" id="site-header">
       <div class="site-header-inner">
-        <a class="site-brand" href="/">Charan Reddy</a>
         <nav class="site-header-nav" aria-label="Primary">
-          <a class="site-nav-link" href="/projects">Projects</a>
-          <a class="site-nav-link" href="/blogs">Blogs</a>
+          <a class="site-nav-link" href="/">home</a>
+          <a class="site-nav-link" href="/projects">projects</a>
+          <a class="site-nav-link" href="/blogs">blogs</a>
         </nav>
         <button class="site-header-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-header-nav">
           <span aria-hidden="true"></span>
@@ -67,41 +67,39 @@
         <div class="page-section" data-page="home">
 
           <div class="hero-block hero-block--home">
-            <header class="hero">
-              <h1 class="hello-title">Hey, I am Charan</h1>
-              <h3 class="hello-subtitle">always building. always learning.</h3>
-              <div class="hero-bio">
-                <p>I am a software engineer who likes building simple, reliable tools for real work.</p>
-                <p>I enjoy taking ideas from start to finish and making them actually work.</p>
-                <p>I built<br /><a href="/projects">Bug Bingo</a> — a live game where teams fix bugs together and gets score.<br /><a href="/projects">DaySale</a> — a simple tool that helps my dad's see daily sales clearly from messy files.</p>
-              </div>
-              <nav class="hero-links" aria-label="Social links">
-                <a class="icon-link icon-link--lg" href="https://www.linkedin.com/in/puchala-charanreddy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg><span class="sr-only"> (opens in a new tab)</span>
-                </a>
-                <a class="icon-link icon-link--lg" href="https://x.com/charanstwt" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg><span class="sr-only"> (opens in a new tab)</span>
-                </a>
-                <a class="icon-link icon-link--lg" href="https://github.com/charanreddy-git" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg><span class="sr-only"> (opens in a new tab)</span>
-                </a>
-                <a class="icon-link icon-link--lg" href="mailto:charanreddy.puchala@gmail.com" aria-label="Email">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
-                </a>
-              </nav>
-            </header>
+            <div class="intro">
+              <h1>hi i'm Charan.</h1>
+            </div>
+
+            <p class="lede">
+              software engineer. always building. always learning.
+            </p>
+
+            <p class="bio-closing">
+              i enjoy taking ideas from start to finish and making them actually work.
+            </p>
+
+            <section class="recent" aria-labelledby="recent-heading">
+              <h2 id="recent-heading">my most recent posts</h2>
+              <ul class="post-list" id="home-post-list" hidden></ul>
+              <p class="blog-empty" id="home-blog-empty" hidden>Nothing here yet. Check back later.</p>
+            </section>
           </div>
-
-
-
-
 
         </div>
       </main>
     </div>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Charan Reddy</p>
+      <div class="footer-inner">
+        <nav class="footer-links" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/puchala-charanreddy" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="https://x.com/charanstwt" target="_blank" rel="noopener noreferrer">x</a>
+          <a href="https://github.com/charanreddy-git" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="mailto:charanreddy.puchala@gmail.com">email</a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 Charan Reddy</p>
+      </div>
     </footer>
 
     <script src="public/vendor/marked.js" defer></script>

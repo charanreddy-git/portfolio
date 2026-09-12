@@ -27,21 +27,12 @@ body {
 
 body {
   position: relative;
-  background-color: var(--bg);
-  background-image:
-    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
-  background-size: var(--grid-size) var(--grid-size);
-  background-position: 0 0;
+  background: var(--bg);
+  /* jackedAJ-inspired: minimal solid, no grid — content-first focus */
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  background: radial-gradient(ellipse 900px 500px at 50% -8%, rgba(0, 0, 0, 0.03), transparent 62%);
+  content: none;
 }
 
 a {

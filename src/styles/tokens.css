@@ -17,10 +17,10 @@
   --text-lg: 1.0625rem;
   --text-2xl: 1.5rem;
   --leading-2xl: calc(2 / 1.5);
-  --content-max: 1024px;
-  --content-narrow: 680px;
+  --content-max: 704px;
+  --content-narrow: 640px;
   --header-height: 56px;
-  --pad-x: 16px;
+  --pad-x: 40px;
   --space-xs: 0.75rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
@@ -39,13 +39,19 @@
 
 @media (max-width: 768px) {
   :root {
-    --pad-x: 12px;
+    --pad-x: 24px;
     --content-max: 100%;
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    --pad-x: 10px;
+    --pad-x: 20px;
+  }
+}
+
+@media (min-width: 1100px) {
+  :root {
+    --pad-x: 48px;
   }
 }

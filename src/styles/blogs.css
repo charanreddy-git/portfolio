@@ -1,11 +1,9 @@
 .blog-hr {
-  margin: 0 0 1.25rem;
-  border: 0;
-  border-top: 1px solid var(--lines);
+  display: none;
 }
 
 .section--blogs {
-  padding-top: 28px;
+  padding-top: 12px;
 }
 
 /* Arpit-style blog list: date mono gray : title black — generous tap target */
