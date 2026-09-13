@@ -108,12 +108,24 @@ h1 {
   text-underline-offset: 3px;
 }
 
-/* jackedAJ-inspired content-first */
+/* jackedAJ exact intro: image left, heading right — square variant */
 .intro {
   display: flex;
   align-items: center;
   gap: 1.25rem;
   margin-bottom: 1.75rem;
+}
+
+.intro-avatar {
+  display: block;
+  width: 7.5rem;
+  height: 7.5rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--bg-warm);
 }
 
 .intro h1 {
@@ -268,6 +280,17 @@ h1 {
 
   .lede {
     font-size: 1.05rem;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .intro-avatar {
+    width: 6.5rem;
+    height: 6.5rem;
   }
 }
 
