@@ -13,7 +13,11 @@ const MIME = {
   ".mjs": "text/javascript",
   ".svg": "image/svg+xml",
   ".json": "application/json",
-  ".ico": "image/x-icon"
+  ".ico": "image/x-icon",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".png": "image/png",
+  ".webp": "image/webp"
 };
 
 function send(res, status, filePath) {

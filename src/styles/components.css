@@ -11,26 +11,6 @@
   box-shadow: none;
 }
 
-/* keep grid continuity inside content: subtle inner border already done */
-
-.section-title {
-  margin: 0;
-  font-size: var(--text-2xl);
-  font-weight: 800;
-  line-height: var(--leading-2xl);
-  letter-spacing: -0.02em;
-}
-
-
-
-/* ---- jackedAJ-inspired projects — simple bullet list, no grid ---- */
-.projects-title {
-  font-family: var(--sans);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  text-transform: lowercase;
-}
-
 .section--projects {
   padding-top: 1.5rem;
 }
@@ -98,24 +78,6 @@
   text-decoration: none;
 }
 
-/* legacy grid kept but unused */
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin-top: 0;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background: var(--bg);
-  border: 1px solid var(--lines);
-  border-radius: 8px;
-  padding: 1.25rem;
-}
-
 @media (max-width: 480px) {
   .section {
     padding-top: 36px;
@@ -123,15 +85,5 @@
 
   .section:last-of-type {
     padding-bottom: 36px;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-    gap: 1rem;
-  }
-
-  .project-card {
-    padding: 1.1rem;
   }
 }

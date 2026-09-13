@@ -22,10 +22,11 @@ If you edit a post's frontmatter (e.g. change the title) or add/remove `.md` fil
 ## Structure
 
 ```
-├── index.html / 404.html          # entry (GH Pages requires root)
+├── index.html / 404.html          # entry (SPA fallback)
+├── image.jpg                      # avatar
 ├── src/
 │   ├── pages/      # blogs.html, projects.html (SPA fragments)
-│   ├── styles/     # base, layout, hero, components, blogs, footer, icons, tokens
+│   ├── styles/     # base, layout, hero, components, blogs, footer, tokens
 │   ├── js/         # main.js (SPA router)
 │   └── content/blogs/posts/       # markdown + posts.json
 ├── public/vendor/marked.js

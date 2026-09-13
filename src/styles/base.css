@@ -6,9 +6,6 @@
 
 html {
   background: var(--bg);
-}
-
-html {
   font-size: 17px;
 }
 
@@ -48,25 +45,6 @@ a:focus-visible {
 ::selection {
   background: var(--text);
   color: var(--bg);
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.svg-sprite {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
 }
 
 .skip-link {

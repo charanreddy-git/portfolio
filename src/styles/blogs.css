@@ -1,7 +1,3 @@
-.blog-hr {
-  display: none;
-}
-
 .section--blogs {
   padding-top: 12px;
 }
@@ -35,7 +31,7 @@
 .post-link:focus-visible {
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decorationThickness: 2px;
+  text-decoration-thickness: 2px;
 }
 
 .post-date {

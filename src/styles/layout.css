@@ -20,24 +20,6 @@
   position: relative;
 }
 
-.site-brand {
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  font-weight: 800;
-  font-style: italic;
-  letter-spacing: -0.03em;
-  color: var(--text);
-  text-decoration: none;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.site-brand:hover,
-.site-brand:focus-visible {
-  text-decoration: none;
-  opacity: 0.8;
-}
-
 .site-header-nav {
   display: flex;
   align-items: center;
