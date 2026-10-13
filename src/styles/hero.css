@@ -89,6 +89,16 @@ h1 {
   padding-bottom: 2.5rem;
 }
 
+[data-theme="dark"] .intro-avatar {
+  border: 1px solid var(--lines);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .intro-avatar {
+    border: 1px solid var(--lines);
+  }
+}
+
 @media (max-width: 480px) {
   .hero-block {
     padding-top: 32px;

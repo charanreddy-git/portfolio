@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
   --bg: #fff;
   --bg-warm: #fafaf9;
   --text: #0a0a0a;
@@ -19,6 +19,33 @@
   --radius-sm: 6px;
   --radius-md: 8px;
   --font-sm: 0.875rem;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0a0a0a;
+  --bg-warm: #141413;
+  --text: #ededed;
+  --text-muted: #a3a3a3;
+  --text-faint: #8a8a8a;
+  --lines: #262626;
+}
+
+/* No-JS fallback: follow the OS theme until an explicit choice is stored. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0a0a0a;
+    --bg-warm: #141413;
+    --text: #ededed;
+    --text-muted: #a3a3a3;
+    --text-faint: #8a8a8a;
+    --lines: #262626;
+  }
 }
 
 @media (max-width: 768px) {
