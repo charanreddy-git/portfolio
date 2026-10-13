@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="src/styles/layout.css" />
     <link rel="stylesheet" href="src/styles/hero.css" />
     <link rel="stylesheet" href="src/styles/components.css" />
-    <link rel="stylesheet" href="src/styles/blogs.css" />
     <link rel="stylesheet" href="src/styles/footer.css" />
     <script>if(!sessionStorage.getItem("spa-path"))sessionStorage.setItem("spa-path",location.pathname);</script>
   </head>
@@ -35,7 +34,6 @@
         <nav class="site-header-nav" aria-label="Primary">
           <a class="site-nav-link" href="/">home</a>
           <a class="site-nav-link" href="/projects">projects</a>
-          <a class="site-nav-link" href="/blogs">blogs</a>
         </nav>
         <button class="site-header-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-header-nav">
           <span aria-hidden="true"></span>
@@ -60,12 +58,6 @@
             <p class="bio-closing">
               i enjoy taking ideas from start to finish and making them actually work.
             </p>
-
-            <section class="recent" aria-labelledby="recent-heading">
-              <h2 id="recent-heading">my most recent posts</h2>
-              <ul class="post-list" id="home-post-list" hidden></ul>
-              <p class="blog-empty" id="home-blog-empty" hidden>Nothing here yet. Check back later.</p>
-            </section>
           </div>
 
         </div>
@@ -84,7 +76,6 @@
       </div>
     </footer>
 
-    <script src="public/vendor/marked.js" defer></script>
     <script src="src/js/main.js" defer></script>
   </body>
 </html>

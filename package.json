@@ -5,11 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node tools/serve.mjs",
-    "build": "npm run blog:build",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "new-post": "node tools/new-post.mjs",
-    "blog:build": "node tools/build-blog-index.mjs"
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "eslint": "^9.0.0",

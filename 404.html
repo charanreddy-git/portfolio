@@ -58,8 +58,8 @@
       (function () {
         sessionStorage.setItem("spa-path", location.pathname);
         var path = location.pathname;
-        var validRoutes = ["/", "/projects", "/blogs"];
-        if (path && (validRoutes.indexOf(path) !== -1 || path.indexOf("/blogs/") === 0)) {
+        var validRoutes = ["/", "/projects"];
+        if (path && validRoutes.indexOf(path) !== -1) {
           location.replace("/");
         }
       })();

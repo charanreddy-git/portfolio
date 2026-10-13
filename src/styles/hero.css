@@ -85,18 +85,6 @@ h1 {
   color: var(--text);
 }
 
-.recent {
-  margin-top: 2.75rem;
-}
-
-.recent h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: var(--text);
-  letter-spacing: -0.02em;
-}
-
 .hero-block--home {
   padding-bottom: 2.5rem;
 }
