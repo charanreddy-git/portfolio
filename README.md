@@ -1,23 +1,19 @@
 # Charan Reddy's Portfolio
 
-Personal portfolio site — a single-page application built with vanilla JS, HTML, and CSS. No framework, no bundler.
+Personal portfolio site — one static HTML file with inline CSS and JS. No framework, no bundler, no build step.
 
 ## Usage
 
+Open `index.html` in a browser, or serve the folder:
+
 ```bash
-npm start       # Start dev server on http://localhost:8080
-npm run lint    # Run ESLint
+python3 -m http.server
 ```
 
 ## Structure
 
 ```
-├── index.html / 404.html          # entry (SPA fallback)
-├── image.jpg                      # avatar
-├── src/
-│   ├── pages/      # projects.html (SPA fragments)
-│   ├── styles/     # base, layout, hero, components, footer, tokens
-│   └── js/         # main.js (SPA router)
-└── tools/          # serve
+├── index.html   # the entire site: markup, styles, script
+├── image.jpg    # avatar
+└── favicon.svg
 ```
-
