@@ -13,7 +13,9 @@ python3 -m http.server
 ## Structure
 
 ```
-├── index.html   # the entire site: markup, styles, script
-├── image.jpg    # avatar
+├── index.html     # the entire site: markup, styles, script
+├── avatar-240.jpg # avatar variant, 240px
+├── avatar-480.jpg # avatar variant, 480px
+├── image.jpg      # original avatar source
 └── favicon.svg
 ```
